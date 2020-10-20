@@ -75,7 +75,7 @@ var setupMicrophone = function(){
 navigator.getUserMedia(
 	{audio : true},
 	function(stream){
-		document.querySelector('audio').src = stream;
+		document.querySelector("audio").src = URsL.createObjectURL(stream);
 		var audioContext = new AudioContext();
 		var analyser = audioContext.createAnalyser();
 		var timeDomain = new Float32Array(analyser.frequencyBinCount);
